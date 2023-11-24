@@ -19,9 +19,3 @@ output "security_group_name" {
   value = data.aws_ec2_spot_price.example.name
 }
 
-data "aws_security_group" "selected" {
-  name= "allow-all"
-}
-output "allow_all_id" {
-  value = data.aws_ec2_spot_price.example.id
-}
