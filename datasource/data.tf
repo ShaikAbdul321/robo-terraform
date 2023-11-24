@@ -18,10 +18,3 @@ data "aws_security_group" "selected" {
 output "allow_all_id" {
   value = data.aws_security_group.selected.id
 }
-
-data "aws_security_group_id" "selected1" {
-  id ="sg-0fdd769c0bba41ee3"
-}
-output "security_group_name" {
-  value = data.aws_security_group_id.selected1.name
-}
