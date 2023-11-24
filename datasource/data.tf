@@ -13,9 +13,9 @@ output "t3_medium_spot_price" {
 
 
 data "aws_security_group" "selected" {
-  id = "sg-0fdd769c0bba41ee3"
+  name= "allow-all"
 }
-output "security_group_name" {
-  value = data.aws_ec2_spot_price.example.name
+output "allow_all_id" {
+  value = data.aws_ec2_spot_price.example.id
 }
 
