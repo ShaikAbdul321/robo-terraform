@@ -24,6 +24,9 @@ variable "map" {
     }
   }
 }
+output "map_output"{
+  value = var.map["devops"]
+}
 
 variable "env" {}
 output "tfvars_output" {
