@@ -8,7 +8,7 @@ resource "aws_instance" "web" {
     Name = var.name
   }
 }
-
+####################provisioners in terraform####################
 resource "null_resource" "null" {
   depends_on = [aws_instance.web,aws_route53_record.www]
   provisioner "remote-exec" {
@@ -23,6 +23,7 @@ resource "null_resource" "null" {
     ]
   }
 }
+############# creating route53 records in terraform##########
 resource "aws_route53_record" "www" {
   zone_id = "Z08631072FSVS0GDIGH1F"
   name    = "${var.name}-dev"
