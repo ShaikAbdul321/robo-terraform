@@ -37,7 +37,7 @@ variable "course" {
   }
 }
 output "course_detail" {
-  value = var.course["Devops"]["topics"]
+  value = var.course["Devops"]["topic"]
 }
 ####### To lookup whether value is there or not ######
 output "course_lookup" {
